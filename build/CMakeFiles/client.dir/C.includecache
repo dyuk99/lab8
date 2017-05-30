@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sasha/progbase2/labs/lab8/client/client.c
+stdlib.h
+-
+stdio.h
+-
+errno.h
+-
+progbase/net.h
+-
+jansson.h
+-
+string.h
+-
+

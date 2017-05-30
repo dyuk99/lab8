@@ -1,0 +1,164 @@
+\hypertarget{clientList_8h}{\section{include/client\-List.h File Reference}
+\label{clientList_8h}\index{include/client\-List.\-h@{include/client\-List.\-h}}
+}
+
+
+Generic list abstract data type.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{clientList_8h_a12005de2a00ea727d77f9e75e6677fc2}{typedef struct \hyperlink{structSongs}{Songs} {\bfseries Songs}}\label{clientList_8h_a12005de2a00ea727d77f9e75e6677fc2}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{clientList_8h_a6e13ad96f5681cb2bef578fedf5c1c44}{\hyperlink{structSongs}{Songs} $\ast$ \hyperlink{clientList_8h_a6e13ad96f5681cb2bef578fedf5c1c44}{Songs\-New} (int id, char name\mbox{[}100\mbox{]}, char performer\mbox{[}100\mbox{]})}\label{clientList_8h_a6e13ad96f5681cb2bef578fedf5c1c44}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} constructor. \end{DoxyCompactList}\item 
+\hypertarget{clientList_8h_a5a20f123654dd64d270f4d128910c798}{\hyperlink{structSongs}{Songs} $\ast$ \hyperlink{clientList_8h_a5a20f123654dd64d270f4d128910c798}{Songs\-New\-Fict} ()}\label{clientList_8h_a5a20f123654dd64d270f4d128910c798}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} constructor with fictive node. \end{DoxyCompactList}\item 
+\hyperlink{structSongs}{Songs} $\ast$ \hyperlink{clientList_8h_a6f709b0916b5f612191330fdc50c1ce3}{Songs\-Add\-Last} (\hyperlink{structSongs}{Songs} $\ast$self, \hyperlink{structSongs}{Songs} $\ast$node)
+\begin{DoxyCompactList}\small\item\em adds new item to the end of \hyperlink{structList}{List} \end{DoxyCompactList}\item 
+\hypertarget{clientList_8h_a1cbaad8440165f6a0efd6f9864b1e5a1}{void \hyperlink{clientList_8h_a1cbaad8440165f6a0efd6f9864b1e5a1}{free\-Songs} (\hyperlink{structSongs}{Songs} $\ast$$\ast$self)}\label{clientList_8h_a1cbaad8440165f6a0efd6f9864b1e5a1}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} destructor. \end{DoxyCompactList}\item 
+\hyperlink{structSongs}{Songs} $\ast$ \hyperlink{clientList_8h_a8a41451122f7d3065dd62f5bb96f0297}{Delete\-Song} (\hyperlink{structSongs}{Songs} $\ast$self, int index)
+\begin{DoxyCompactList}\small\item\em remove item at index \end{DoxyCompactList}\item 
+\hypertarget{clientList_8h_af354a97991f345680a59359143f0fad8}{void \hyperlink{clientList_8h_af354a97991f345680a59359143f0fad8}{free\-Song} (\hyperlink{structSongs}{Songs} $\ast$$\ast$node)}\label{clientList_8h_af354a97991f345680a59359143f0fad8}
+
+\begin{DoxyCompactList}\small\item\em Node destructor. \end{DoxyCompactList}\item 
+int \hyperlink{clientList_8h_af9c8d3e693c56810e5dfe21f991bebe8}{count\-Songs} (\hyperlink{structSongs}{Songs} $\ast$self)
+\item 
+\hyperlink{structSongs}{Songs} $\ast$ \hyperlink{clientList_8h_aad5d004be285f82085ade391f7cd40b4}{Songs\-Get\-Node} (\hyperlink{structSongs}{Songs} $\ast$self, int index)
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} items getter. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{clientList_8h_a39cc924b5eed357a5e87109defdf1178}{Song\-Get\-Performer\-Name} (\hyperlink{structSongs}{Songs} $\ast$self)
+\begin{DoxyCompactList}\small\item\em get Node Performer Name field data \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{clientList_8h_a8aa3a0afe01ff3500eca9f9d5fa223e8}{Song\-Get\-Name} (\hyperlink{structSongs}{Songs} $\ast$self)
+\begin{DoxyCompactList}\small\item\em get Node Name field data \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{clientList_8h_a7d5443541def848487016bb81839bba7}{Song\-Get\-Performer\-Id} (\hyperlink{structSongs}{Songs} $\ast$self)
+\begin{DoxyCompactList}\small\item\em get Node Id field data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic list abstract data type. 
+
+\subsection{Function Documentation}
+\hypertarget{clientList_8h_af9c8d3e693c56810e5dfe21f991bebe8}{\index{client\-List.\-h@{client\-List.\-h}!count\-Songs@{count\-Songs}}
+\index{count\-Songs@{count\-Songs}!clientList.h@{client\-List.\-h}}
+\subsubsection[{count\-Songs}]{\setlength{\rightskip}{0pt plus 5cm}int count\-Songs (
+\begin{DoxyParamCaption}
+\item[{{\bf Songs} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}\label{clientList_8h_af9c8d3e693c56810e5dfe21f991bebe8}
+\begin{DoxyReturn}{Returns}
+a number of items in list 
+\end{DoxyReturn}
+\hypertarget{clientList_8h_a8a41451122f7d3065dd62f5bb96f0297}{\index{client\-List.\-h@{client\-List.\-h}!Delete\-Song@{Delete\-Song}}
+\index{Delete\-Song@{Delete\-Song}!clientList.h@{client\-List.\-h}}
+\subsubsection[{Delete\-Song}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Songs}$\ast$ Delete\-Song (
+\begin{DoxyParamCaption}
+\item[{{\bf Songs} $\ast$}]{self, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{clientList_8h_a8a41451122f7d3065dd62f5bb96f0297}
+
+
+remove item at index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index of element to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to \hyperlink{structList}{List} head 
+\end{DoxyReturn}
+\hypertarget{clientList_8h_a8aa3a0afe01ff3500eca9f9d5fa223e8}{\index{client\-List.\-h@{client\-List.\-h}!Song\-Get\-Name@{Song\-Get\-Name}}
+\index{Song\-Get\-Name@{Song\-Get\-Name}!clientList.h@{client\-List.\-h}}
+\subsubsection[{Song\-Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Song\-Get\-Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Songs} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}\label{clientList_8h_a8aa3a0afe01ff3500eca9f9d5fa223e8}
+
+
+get Node Name field data 
+
+\begin{DoxyReturn}{Returns}
+pointer to memory from where to read data 
+\end{DoxyReturn}
+\hypertarget{clientList_8h_a7d5443541def848487016bb81839bba7}{\index{client\-List.\-h@{client\-List.\-h}!Song\-Get\-Performer\-Id@{Song\-Get\-Performer\-Id}}
+\index{Song\-Get\-Performer\-Id@{Song\-Get\-Performer\-Id}!clientList.h@{client\-List.\-h}}
+\subsubsection[{Song\-Get\-Performer\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Song\-Get\-Performer\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Songs} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}\label{clientList_8h_a7d5443541def848487016bb81839bba7}
+
+
+get Node Id field data 
+
+\begin{DoxyReturn}{Returns}
+pointer to memory from where to read data 
+\end{DoxyReturn}
+\hypertarget{clientList_8h_a39cc924b5eed357a5e87109defdf1178}{\index{client\-List.\-h@{client\-List.\-h}!Song\-Get\-Performer\-Name@{Song\-Get\-Performer\-Name}}
+\index{Song\-Get\-Performer\-Name@{Song\-Get\-Performer\-Name}!clientList.h@{client\-List.\-h}}
+\subsubsection[{Song\-Get\-Performer\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Song\-Get\-Performer\-Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Songs} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}\label{clientList_8h_a39cc924b5eed357a5e87109defdf1178}
+
+
+get Node Performer Name field data 
+
+\begin{DoxyReturn}{Returns}
+pointer to memory from where to read data 
+\end{DoxyReturn}
+\hypertarget{clientList_8h_a6f709b0916b5f612191330fdc50c1ce3}{\index{client\-List.\-h@{client\-List.\-h}!Songs\-Add\-Last@{Songs\-Add\-Last}}
+\index{Songs\-Add\-Last@{Songs\-Add\-Last}!clientList.h@{client\-List.\-h}}
+\subsubsection[{Songs\-Add\-Last}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Songs}$\ast$ Songs\-Add\-Last (
+\begin{DoxyParamCaption}
+\item[{{\bf Songs} $\ast$}]{self, }
+\item[{{\bf Songs} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}}\label{clientList_8h_a6f709b0916b5f612191330fdc50c1ce3}
+
+
+adds new item to the end of \hyperlink{structList}{List} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & -\/ pointer to memory from where to read new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to \hyperlink{structList}{List} head 
+\end{DoxyReturn}
+\hypertarget{clientList_8h_aad5d004be285f82085ade391f7cd40b4}{\index{client\-List.\-h@{client\-List.\-h}!Songs\-Get\-Node@{Songs\-Get\-Node}}
+\index{Songs\-Get\-Node@{Songs\-Get\-Node}!clientList.h@{client\-List.\-h}}
+\subsubsection[{Songs\-Get\-Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Songs}$\ast$ Songs\-Get\-Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Songs} $\ast$}]{self, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{clientList_8h_aad5d004be285f82085ade391f7cd40b4}
+
+
+\hyperlink{structList}{List} items getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index of element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+poinyer to \hyperlink{structList}{List} head 
+\end{DoxyReturn}

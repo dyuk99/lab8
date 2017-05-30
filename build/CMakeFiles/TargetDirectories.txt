@@ -1,0 +1,4 @@
+/home/sasha/progbase2/labs/lab8/build/CMakeFiles/rebuild_cache.dir
+/home/sasha/progbase2/labs/lab8/build/CMakeFiles/edit_cache.dir
+/home/sasha/progbase2/labs/lab8/build/CMakeFiles/client.dir
+/home/sasha/progbase2/labs/lab8/build/CMakeFiles/server.dir

@@ -1,0 +1,84 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+#include <progbase/net.h>
+#include "include/clientList.h"
+#include <jansson.h>
+#define BUFFER_LEN 10000
+
+void messageToList (Numbers *numbers, const char *jsonStr) {
+	json_error_t err;
+	json_t * jsonArr = json_loads(jsonStr, 0, &err);
+	int index = 0;
+	json_t * value = json_object_get(jsonArr, "data");
+	json_t * digit = NULL;
+	json_array_foreach(value, index, digit) {
+		numbersAddLast(numbers, NumbersNew(json_integer_value(digit)));
+	}
+	json_decref(jsonArr);
+}
+
+int main(void) {
+    // initialize all data
+    TcpClient * client = TcpClient_init(&(TcpClient){});
+    IpAddress * serverAddress = IpAddress_init(
+        &(IpAddress){},  // value on stack
+        "127.0.0.1",  // server host IP-address (localhost)
+        3000);  // server port
+    
+    NetMessage * message = NetMessage_init(
+        &(NetMessage){},  // value on stack
+        (char[BUFFER_LEN]){},  // array on stack 
+        BUFFER_LEN); 
+	
+	if (!TcpClient_connect(client, serverAddress)) {
+        perror("tcp connect");
+        return 1;
+	}
+
+	char request[BUFFER_LEN] = "";
+	fgets(request, BUFFER_LEN, stdin);
+	NetMessage_setDataString(message, request);
+
+	//
+	// send string to server
+	printf("Send string `%s` to server %s:%d\n",
+		NetMessage_data(message), 
+		IpAddress_address(serverAddress),
+		IpAddress_port(serverAddress));
+	if(!TcpClient_send(client, message)) {
+		perror("send");
+		return 1;
+	}
+
+	while (1) {
+	if(!TcpClient_receive(client, message)) {
+		perror("recv");
+		return 1;
+	}
+	if (NetMessage_dataLength(message) == 0) {
+         // no more data to receive from server
+        break;
+	}
+	printf("Response received from server (%d bytes): %s\r\n", 
+		NetMessage_dataLength(message),
+		NetMessage_data(message));
+	printf("List parsed from json string: ");
+	Numbers *numbers = NumbersNewFict();
+	messageToList(numbers, NetMessage_data(message));	
+	printNumbers(numbers);
+	printf("\nСформувати новий вектор чисел за правилом: якщо елемент вхідного масиву додатній - він перетворюється на 1, "
+		"у іншому випадку - на 0. Розбити цей вектор на послідовності по 8 чисел та відкинути неповну послідовність "
+		"(де кількість чисел <8). Перетворити кожну 8-мку чисел (0 та 1) на число у десятковій системі числення і записати у новий вектор."
+		"Вивести строку із завданням та результат обробки даних у консоль.\nList of binary digits: ");
+	Numbers *binaryNumbers = NumbersNewFict();
+	proceedListToBinary(binaryNumbers, numbers);
+	freeNumbers(&numbers);
+	freeNumbers(&binaryNumbers);
+}
+//
+// close client object
+TcpClient_close(client);
+printf("\n");
+return 0;
+}

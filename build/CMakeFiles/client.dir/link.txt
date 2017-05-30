@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -Werror -Wall -g  -rdynamic CMakeFiles/client.dir/client/client.c.o  -o client -lprogbase -ljansson -lm 
