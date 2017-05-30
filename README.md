@@ -5,8 +5,10 @@
 - */* - відправити у відповідь JSON-об'єкт із інформацією про сервер:
 
 *{
-    "title": "%SERVER_NAME%",\n 
-    "developer": "%YOUR_NAME_SURNAME%",\n 
+    "title": "%SERVER_NAME%",
+
+    "developer": "%YOUR_NAME_SURNAME%", 
+
     "time": "%SERVER_TIME%"
 }*
 
