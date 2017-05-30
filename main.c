@@ -11,7 +11,7 @@
 #define BUFFER_LEN 10000
 
 char *parseRequest(char *str);
-void processResponse(char *str, Songs*Songs);
+void processResponse(char *str, Songs*Songs, const int port);
 
 int main(int argc, char * argv[]) {
     Songs *songs = SongsNewFict();
@@ -59,7 +59,7 @@ int main(int argc, char * argv[]) {
             NetMessage_data(message));
         char *resStr = (char*)NetMessage_data(message);
 		parseRequest(resStr);
-        processResponse(resStr, songs);
+        processResponse(resStr, songs, port);
         // send data back
         
         if(!TcpClient_send(&client, NetMessage_setDataString(message,resStr))) {
@@ -94,9 +94,7 @@ char* readFromFileToString(char* buffer) {
             }	
 		}
 	}
-    //buffer[strlen(buffer)/2] = '\0';
 	fclose(fin);
-    printf("**%s**", buffer);
 	return buffer;
 }
 
@@ -110,17 +108,37 @@ char *parseRequest(char *str){
     return str;
 }
 
-void processResponse(char *str, Songs*songs){
+void processResponse(char *str, Songs*songs, const int port){
     if (strstr("/", str) && strlen("/") == strlen(str)) {
         json_t * ar = json_array();
 	    // for (int i = 0; i < 1; i++)
         // {
             json_t * json = json_object();
-            json_object_set_new(json, "titleab", json_string("dyukServer"));
+            char name[100] = "127.0.0.1:";
+            sprintf(name+strlen(name), "%i", port);
+            json_object_set_new(json, "titleab", json_string(name));
             json_object_set_new(json, "developer", json_string("Dyuk"));
             json_object_set_new(json, "time", json_string("serverTime"));
             json_array_append(ar, json);
         // }
+        char * jsonString = json_dumps(ar, JSON_INDENT(2));
+        strcpy(str, (char *)jsonString);
+        free(jsonString);
+        json_decref(ar);
+    }
+    else if (strstr(str, "/favourites") && strlen("/favourites") == strlen(str)) {
+        json_t * ar = json_array();
+        for (int i = 0; i < countSongs(songs); i++)
+        {
+            Songs *node = SongsGetNode(songs, i);
+            
+                json_t * json = json_object();
+                json_object_set_new(json, "name", json_string(SongGetName(node)));
+                json_object_set_new(json, "performer", json_string(SongGetPerformerName(node)));
+                json_object_set_new(json, "id", json_integer(*SongGetPerformerId(node)));
+                json_array_append(ar, json);
+            
+        }
         char * jsonString = json_dumps(ar, JSON_INDENT(2));
         strcpy(str, (char *)jsonString);
         free(jsonString);
@@ -232,4 +250,5 @@ void processResponse(char *str, Songs*songs){
         free(jsonString);
         json_decref(ar);
     }
+    else strcpy(str, "404 Not Found");
 }

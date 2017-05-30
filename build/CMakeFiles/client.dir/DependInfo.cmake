@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/sasha/progbase2/labs/lab8/client/client.c" "/home/sasha/progbase2/labs/lab8/build/CMakeFiles/client.dir/client/client.c.o"
+  "/home/sasha/lab8/client/client.c" "/home/sasha/lab8/build/CMakeFiles/client.dir/client/client.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

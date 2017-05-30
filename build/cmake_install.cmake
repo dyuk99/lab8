@@ -1,4 +1,4 @@
-# Install script for directory: /home/sasha/progbase2/labs/lab8
+# Install script for directory: /home/sasha/lab8
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sasha/progbase2/labs/lab8/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sasha/lab8/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

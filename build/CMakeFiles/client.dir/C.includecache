@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sasha/progbase2/labs/lab8/client/client.c
+/home/sasha/lab8/client/client.c
 stdlib.h
 -
 stdio.h

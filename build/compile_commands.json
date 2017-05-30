@@ -1,17 +1,17 @@
 [
 {
-  "directory": "/home/sasha/progbase2/labs/lab8/build",
-  "command": "/usr/bin/cc  -I/home/sasha/progbase2/labs/lab8/include -I/home/sasha/progbase2/labs/lab8/client/include  -std=c99 -Werror -Wall -g   -o CMakeFiles/client.dir/client/client.c.o   -c /home/sasha/progbase2/labs/lab8/client/client.c",
-  "file": "/home/sasha/progbase2/labs/lab8/client/client.c"
+  "directory": "/home/sasha/lab8/build",
+  "command": "/usr/bin/cc  -I/home/sasha/lab8/include -I/home/sasha/lab8/client/include  -std=c99 -Werror -Wall -g   -o CMakeFiles/client.dir/client/client.c.o   -c /home/sasha/lab8/client/client.c",
+  "file": "/home/sasha/lab8/client/client.c"
 },
 {
-  "directory": "/home/sasha/progbase2/labs/lab8/build",
-  "command": "/usr/bin/cc  -I/home/sasha/progbase2/labs/lab8/include -I/home/sasha/progbase2/labs/lab8/client/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/main.c.o   -c /home/sasha/progbase2/labs/lab8/main.c",
-  "file": "/home/sasha/progbase2/labs/lab8/main.c"
+  "directory": "/home/sasha/lab8/build",
+  "command": "/usr/bin/cc  -I/home/sasha/lab8/include -I/home/sasha/lab8/client/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/main.c.o   -c /home/sasha/lab8/main.c",
+  "file": "/home/sasha/lab8/main.c"
 },
 {
-  "directory": "/home/sasha/progbase2/labs/lab8/build",
-  "command": "/usr/bin/cc  -I/home/sasha/progbase2/labs/lab8/include -I/home/sasha/progbase2/labs/lab8/client/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/src/clientList.c.o   -c /home/sasha/progbase2/labs/lab8/src/clientList.c",
-  "file": "/home/sasha/progbase2/labs/lab8/src/clientList.c"
+  "directory": "/home/sasha/lab8/build",
+  "command": "/usr/bin/cc  -I/home/sasha/lab8/include -I/home/sasha/lab8/client/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/src/clientList.c.o   -c /home/sasha/lab8/src/clientList.c",
+  "file": "/home/sasha/lab8/src/clientList.c"
 }
 ]

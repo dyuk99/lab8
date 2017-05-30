@@ -6,5 +6,5 @@ C_FLAGS = -std=c99 -Werror -Wall -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/sasha/progbase2/labs/lab8/include -I/home/sasha/progbase2/labs/lab8/client/include 
+C_INCLUDES = -I/home/sasha/lab8/include -I/home/sasha/lab8/client/include 
 
