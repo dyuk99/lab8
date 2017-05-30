@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/sasha/lab8/main.c" "/home/sasha/lab8/build/CMakeFiles/server.dir/main.c.o"
   "/home/sasha/lab8/src/clientList.c" "/home/sasha/lab8/build/CMakeFiles/server.dir/src/clientList.c.o"
+  "/home/sasha/lab8/src/response.c" "/home/sasha/lab8/build/CMakeFiles/server.dir/src/response.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

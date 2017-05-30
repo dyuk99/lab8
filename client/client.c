@@ -12,7 +12,7 @@ int main(void) {
     IpAddress * serverAddress = IpAddress_init(
         &(IpAddress){},  // value on stack
         "127.0.0.1",  // server host IP-address (localhost)
-        3000);  // server port
+        2000);  // server port
     
     NetMessage * message = NetMessage_init(
         &(NetMessage){},  // value on stack

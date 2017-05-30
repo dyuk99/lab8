@@ -14,6 +14,28 @@ stdio.h
 stdbool.h
 -
 
+/home/sasha/lab8/include/response.h
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+clientList.h
+/home/sasha/lab8/include/clientList.h
+errno.h
+-
+string.h
+-
+ctype.h
+-
+time.h
+-
+progbase/net.h
+-
+jansson.h
+-
+
 /home/sasha/lab8/main.c
 stdlib.h
 -
@@ -31,6 +53,8 @@ progbase/net.h
 -
 include/clientList.h
 /home/sasha/lab8/include/clientList.h
+include/response.h
+/home/sasha/lab8/include/response.h
 jansson.h
 -
 
@@ -41,4 +65,8 @@ string.h
 -
 math.h
 -
+
+/home/sasha/lab8/src/response.c
+../include/response.h
+/home/sasha/lab8/include/response.h
 

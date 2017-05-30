@@ -105,19 +105,45 @@ CMakeFiles/server.dir/src/clientList.c.o.provides: CMakeFiles/server.dir/src/cli
 CMakeFiles/server.dir/src/clientList.c.o.provides.build: CMakeFiles/server.dir/src/clientList.c.o
 
 
+CMakeFiles/server.dir/src/response.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/response.c.o: ../src/response.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sasha/lab8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/server.dir/src/response.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/src/response.c.o   -c /home/sasha/lab8/src/response.c
+
+CMakeFiles/server.dir/src/response.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/src/response.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sasha/lab8/src/response.c > CMakeFiles/server.dir/src/response.c.i
+
+CMakeFiles/server.dir/src/response.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/src/response.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sasha/lab8/src/response.c -o CMakeFiles/server.dir/src/response.c.s
+
+CMakeFiles/server.dir/src/response.c.o.requires:
+
+.PHONY : CMakeFiles/server.dir/src/response.c.o.requires
+
+CMakeFiles/server.dir/src/response.c.o.provides: CMakeFiles/server.dir/src/response.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/response.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/src/response.c.o.provides
+
+CMakeFiles/server.dir/src/response.c.o.provides.build: CMakeFiles/server.dir/src/response.c.o
+
+
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/main.c.o" \
-"CMakeFiles/server.dir/src/clientList.c.o"
+"CMakeFiles/server.dir/src/clientList.c.o" \
+"CMakeFiles/server.dir/src/response.c.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
 server: CMakeFiles/server.dir/main.c.o
 server: CMakeFiles/server.dir/src/clientList.c.o
+server: CMakeFiles/server.dir/src/response.c.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sasha/lab8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sasha/lab8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 	/usr/local/bin/cmake -E copy_directory /home/sasha/lab8/data /home/sasha/lab8/build
 
@@ -128,6 +154,7 @@ CMakeFiles/server.dir/build: server
 
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/main.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/clientList.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/response.c.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 

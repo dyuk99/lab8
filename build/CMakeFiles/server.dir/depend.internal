@@ -3,7 +3,12 @@
 
 CMakeFiles/server.dir/main.c.o
  /home/sasha/lab8/include/clientList.h
+ /home/sasha/lab8/include/response.h
  /home/sasha/lab8/main.c
 CMakeFiles/server.dir/src/clientList.c.o
  /home/sasha/lab8/include/clientList.h
  /home/sasha/lab8/src/clientList.c
+CMakeFiles/server.dir/src/response.c.o
+ /home/sasha/lab8/include/clientList.h
+ /home/sasha/lab8/include/response.h
+ /home/sasha/lab8/src/response.c

@@ -217,6 +217,33 @@ src/clientList.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/clientList.c.s
 .PHONY : src/clientList.c.s
 
+src/response.o: src/response.c.o
+
+.PHONY : src/response.o
+
+# target to build an object file
+src/response.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/response.c.o
+.PHONY : src/response.c.o
+
+src/response.i: src/response.c.i
+
+.PHONY : src/response.i
+
+# target to preprocess a source file
+src/response.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/response.c.i
+.PHONY : src/response.c.i
+
+src/response.s: src/response.c.s
+
+.PHONY : src/response.s
+
+# target to generate assembly for a file
+src/response.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/response.c.s
+.PHONY : src/response.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -236,6 +263,9 @@ help:
 	@echo "... src/clientList.o"
 	@echo "... src/clientList.i"
 	@echo "... src/clientList.s"
+	@echo "... src/response.o"
+	@echo "... src/response.i"
+	@echo "... src/response.s"
 .PHONY : help
 
 
