@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['songgetname',['SongGetName',['../clientList_8h.html#a8aa3a0afe01ff3500eca9f9d5fa223e8',1,'clientList.c']]],
-  ['songgetperformerid',['SongGetPerformerId',['../clientList_8h.html#a7d5443541def848487016bb81839bba7',1,'clientList.c']]],
-  ['songgetperformername',['SongGetPerformerName',['../clientList_8h.html#a39cc924b5eed357a5e87109defdf1178',1,'clientList.c']]],
-  ['songsaddlast',['SongsAddLast',['../clientList_8h.html#a6f709b0916b5f612191330fdc50c1ce3',1,'clientList.c']]],
-  ['songsgetnode',['SongsGetNode',['../clientList_8h.html#aad5d004be285f82085ade391f7cd40b4',1,'clientList.c']]],
-  ['songsnew',['SongsNew',['../clientList_8h.html#a6e13ad96f5681cb2bef578fedf5c1c44',1,'clientList.c']]],
-  ['songsnewfict',['SongsNewFict',['../clientList_8h.html#a5a20f123654dd64d270f4d128910c798',1,'clientList.c']]]
+  ['getfiledata',['getFileData',['../response_8h.html#ad0acb3cb2de039b5dd8a061378c824c3',1,'response.c']]],
+  ['getfileinfo',['getFileInfo',['../response_8h.html#a17279dbe5bf412c1a86992fd68f6184b',1,'response.c']]],
+  ['getfilteredlistofsongs',['getFilteredListOfSongs',['../response_8h.html#a91449bd9977bff2c02680a2b819aec28',1,'response.c']]],
+  ['getlistofsongs',['getListOfSongs',['../response_8h.html#ac169dea97aef503de139666f7acc7940',1,'response.c']]],
+  ['getserverinfo',['getServerInfo',['../response_8h.html#a8795b5a824950e830280b82b3b7130dd',1,'response.c']]],
+  ['getsongbyid',['getSongById',['../response_8h.html#aaac65a520f772236af9377573ca55733',1,'response.c']]]
 ];

@@ -7,10 +7,10 @@
 
 var indexSectionsWithContent =
 {
-  0: "cdfls",
+  0: "cdfglprs",
   1: "ls",
-  2: "c",
-  3: "cdfs"
+  2: "cr",
+  3: "cdfgprs"
 };
 
 var indexSectionNames =

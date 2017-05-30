@@ -1,0 +1,189 @@
+\hypertarget{response_8h}{\section{include/response.h File Reference}
+\label{response_8h}\index{include/response.\-h@{include/response.\-h}}
+}
+
+
+Response from server.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}client\-List.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$progbase/net.\-h$>$}\\*
+{\ttfamily \#include $<$jansson.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{response_8h_a8795b5a824950e830280b82b3b7130dd}{get\-Server\-Info} (char $\ast$str, const int port)
+\begin{DoxyCompactList}\small\item\em get informetion about server \end{DoxyCompactList}\item 
+void \hyperlink{response_8h_ac169dea97aef503de139666f7acc7940}{get\-List\-Of\-Songs} (char $\ast$str, \hyperlink{structSongs}{Songs} $\ast$songs)
+\begin{DoxyCompactList}\small\item\em get \hyperlink{structList}{List} of favourites songs \end{DoxyCompactList}\item 
+void \hyperlink{response_8h_a91449bd9977bff2c02680a2b819aec28}{get\-Filtered\-List\-Of\-Songs} (char $\ast$str, \hyperlink{structSongs}{Songs} $\ast$songs)
+\begin{DoxyCompactList}\small\item\em get Filtered \hyperlink{structList}{List} of songs \end{DoxyCompactList}\item 
+void \hyperlink{response_8h_aaac65a520f772236af9377573ca55733}{get\-Song\-By\-Id} (char $\ast$str, \hyperlink{structSongs}{Songs} $\ast$songs)
+\begin{DoxyCompactList}\small\item\em get Song by it's id \end{DoxyCompactList}\item 
+void \hyperlink{response_8h_a17279dbe5bf412c1a86992fd68f6184b}{get\-File\-Info} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em get information about file \end{DoxyCompactList}\item 
+void \hyperlink{response_8h_ad0acb3cb2de039b5dd8a061378c824c3}{get\-File\-Data} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em get processed data from file \end{DoxyCompactList}\item 
+void \hyperlink{response_8h_aba0e8e73548e05110a36f05ec2cd86bb}{read\-From\-File\-To\-String} (char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em read file to string \end{DoxyCompactList}\item 
+void \hyperlink{response_8h_a1add9cf45ca22407fcabdaaab833f068}{process\-Response} (char $\ast$str, \hyperlink{structSongs}{Songs} $\ast$songs, const int port)
+\begin{DoxyCompactList}\small\item\em process response \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Response from server. 
+
+\subsection{Function Documentation}
+\hypertarget{response_8h_ad0acb3cb2de039b5dd8a061378c824c3}{\index{response.\-h@{response.\-h}!get\-File\-Data@{get\-File\-Data}}
+\index{get\-File\-Data@{get\-File\-Data}!response.h@{response.\-h}}
+\subsubsection[{get\-File\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void get\-File\-Data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{response_8h_ad0acb3cb2de039b5dd8a061378c824c3}
+
+
+get processed data from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to memory where response string can be read \\
+\hline
+\end{DoxyParams}
+\hypertarget{response_8h_a17279dbe5bf412c1a86992fd68f6184b}{\index{response.\-h@{response.\-h}!get\-File\-Info@{get\-File\-Info}}
+\index{get\-File\-Info@{get\-File\-Info}!response.h@{response.\-h}}
+\subsubsection[{get\-File\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void get\-File\-Info (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{response_8h_a17279dbe5bf412c1a86992fd68f6184b}
+
+
+get information about file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to memory where response string can be read \\
+\hline
+\end{DoxyParams}
+\hypertarget{response_8h_a91449bd9977bff2c02680a2b819aec28}{\index{response.\-h@{response.\-h}!get\-Filtered\-List\-Of\-Songs@{get\-Filtered\-List\-Of\-Songs}}
+\index{get\-Filtered\-List\-Of\-Songs@{get\-Filtered\-List\-Of\-Songs}!response.h@{response.\-h}}
+\subsubsection[{get\-Filtered\-List\-Of\-Songs}]{\setlength{\rightskip}{0pt plus 5cm}void get\-Filtered\-List\-Of\-Songs (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{{\bf Songs} $\ast$}]{songs}
+\end{DoxyParamCaption}
+)}}\label{response_8h_a91449bd9977bff2c02680a2b819aec28}
+
+
+get Filtered \hyperlink{structList}{List} of songs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to memory where response string can be read \\
+\hline
+{\em songs} & -\/ pointer to head of \hyperlink{structList}{List} of songs \\
+\hline
+\end{DoxyParams}
+\hypertarget{response_8h_ac169dea97aef503de139666f7acc7940}{\index{response.\-h@{response.\-h}!get\-List\-Of\-Songs@{get\-List\-Of\-Songs}}
+\index{get\-List\-Of\-Songs@{get\-List\-Of\-Songs}!response.h@{response.\-h}}
+\subsubsection[{get\-List\-Of\-Songs}]{\setlength{\rightskip}{0pt plus 5cm}void get\-List\-Of\-Songs (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{{\bf Songs} $\ast$}]{songs}
+\end{DoxyParamCaption}
+)}}\label{response_8h_ac169dea97aef503de139666f7acc7940}
+
+
+get \hyperlink{structList}{List} of favourites songs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to memory where response string can be read \\
+\hline
+{\em songs} & -\/ pointer to head of \hyperlink{structList}{List} of songs \\
+\hline
+\end{DoxyParams}
+\hypertarget{response_8h_a8795b5a824950e830280b82b3b7130dd}{\index{response.\-h@{response.\-h}!get\-Server\-Info@{get\-Server\-Info}}
+\index{get\-Server\-Info@{get\-Server\-Info}!response.h@{response.\-h}}
+\subsubsection[{get\-Server\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void get\-Server\-Info (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{const int}]{port}
+\end{DoxyParamCaption}
+)}}\label{response_8h_a8795b5a824950e830280b82b3b7130dd}
+
+
+get informetion about server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to memory where response string can be read \\
+\hline
+{\em port} & -\/ port where server is binded \\
+\hline
+\end{DoxyParams}
+\hypertarget{response_8h_aaac65a520f772236af9377573ca55733}{\index{response.\-h@{response.\-h}!get\-Song\-By\-Id@{get\-Song\-By\-Id}}
+\index{get\-Song\-By\-Id@{get\-Song\-By\-Id}!response.h@{response.\-h}}
+\subsubsection[{get\-Song\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void get\-Song\-By\-Id (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{{\bf Songs} $\ast$}]{songs}
+\end{DoxyParamCaption}
+)}}\label{response_8h_aaac65a520f772236af9377573ca55733}
+
+
+get Song by it's id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to memory where response string can be read \\
+\hline
+{\em songs} & -\/ pointer to head of \hyperlink{structList}{List} of songs \\
+\hline
+\end{DoxyParams}
+\hypertarget{response_8h_a1add9cf45ca22407fcabdaaab833f068}{\index{response.\-h@{response.\-h}!process\-Response@{process\-Response}}
+\index{process\-Response@{process\-Response}!response.h@{response.\-h}}
+\subsubsection[{process\-Response}]{\setlength{\rightskip}{0pt plus 5cm}void process\-Response (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{{\bf Songs} $\ast$}]{songs, }
+\item[{const int}]{port}
+\end{DoxyParamCaption}
+)}}\label{response_8h_a1add9cf45ca22407fcabdaaab833f068}
+
+
+process response 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to memory where response string can be read \\
+\hline
+{\em songs} & -\/ pointer to head of \hyperlink{structList}{List} of songs \\
+\hline
+{\em port} & -\/ port where server is binded \\
+\hline
+\end{DoxyParams}
+\hypertarget{response_8h_aba0e8e73548e05110a36f05ec2cd86bb}{\index{response.\-h@{response.\-h}!read\-From\-File\-To\-String@{read\-From\-File\-To\-String}}
+\index{read\-From\-File\-To\-String@{read\-From\-File\-To\-String}!response.h@{response.\-h}}
+\subsubsection[{read\-From\-File\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}void read\-From\-File\-To\-String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{response_8h_aba0e8e73548e05110a36f05ec2cd86bb}
+
+
+read file to string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ pointer to memory where string can be read \\
+\hline
+\end{DoxyParams}
